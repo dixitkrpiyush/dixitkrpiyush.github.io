@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Piyush Dixit — Senior .NET Full Stack Developer</title>
+<meta name="description" content="Technical Lead at Coforge. 11+ years building enterprise applications with .NET Core, React and Azure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07090e;
+  --card:#101520;
+  --card-2:#151b28;
+  --line:rgba(255,255,255,.09);
+  --text:#eef2f8;
+  --dim:#8b98ac;
+  --lime:#c8f65d;
+  --lime-dim:rgba(200,246,93,.12);
+  --font:"Sora",system-ui,sans-serif;
+  --mono:"JetBrains Mono",monospace;
+  --w:1080px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--font);
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{color:inherit;text-decoration:none;}
+:focus-visible{outline:2px solid var(--lime);outline-offset:3px;border-radius:4px;}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 28px;}
+@media(max-width:600px){.wrap{padding:0 20px;}}
+
+.label{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--lime);margin-bottom:20px;display:block;}
+h2{font-size:clamp(26px,3.6vw,38px);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-bottom:36px;}
+section{padding:76px 0;border-top:1px solid var(--line);}
+
+/* ---------- HERO ---------- */
+.hero{padding:0;border:none;position:relative;overflow:hidden;
+  min-height:min(88vh,760px);display:flex;align-items:center;}
+.hero::before{content:"";position:absolute;top:-25%;right:-10%;width:720px;height:720px;
+  background:radial-gradient(circle,rgba(200,246,93,.11),transparent 65%);pointer-events:none;}
+.hero .wrap{position:relative;z-index:1;padding-top:70px;padding-bottom:70px;}
+.chip-live{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);
+  font-size:11px;letter-spacing:.06em;color:var(--dim);border:1px solid var(--line);
+  padding:7px 14px;border-radius:99px;margin-bottom:34px;}
+.pip{width:6px;height:6px;border-radius:50%;background:var(--lime);
+  box-shadow:0 0 0 0 rgba(200,246,93,.6);animation:p 2.4s infinite;}
+@keyframes p{70%{box-shadow:0 0 0 8px rgba(200,246,93,0);}100%{box-shadow:0 0 0 0 rgba(200,246,93,0);}}
+
+h1{font-size:clamp(44px,8.4vw,96px);font-weight:800;letter-spacing:-.05em;
+  line-height:.94;margin-bottom:26px;}
+h1 span{color:var(--lime);}
+.sub{font-size:clamp(17px,2.2vw,21px);color:var(--dim);max-width:46ch;
+  font-weight:400;line-height:1.55;margin-bottom:40px;}
+.sub b{color:var(--text);font-weight:600;}
+
+.btns{display:flex;flex-wrap:wrap;gap:11px;margin-bottom:56px;}
+.b{padding:14px 26px;border-radius:9px;font-size:14.5px;font-weight:600;
+  border:1px solid var(--line);transition:.2s;font-family:var(--font);cursor:pointer;background:none;color:var(--text);}
+.b-fill{background:var(--lime);color:#0a0d13;border-color:var(--lime);}
+.b-fill:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(200,246,93,.25);}
+.b-out:hover{border-color:var(--lime);color:var(--lime);transform:translateY(-2px);}
+
+.facts{display:flex;flex-wrap:wrap;gap:44px;padding-top:34px;border-top:1px solid var(--line);}
+.fact .n{font-size:34px;font-weight:800;letter-spacing:-.04em;line-height:1;}
+.fact .n i{font-style:normal;color:var(--lime);}
+.fact .t{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--dim);margin-top:9px;}
+
+/* ---------- WORK ---------- */
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+@media(max-width:880px){.projects{grid-template-columns:1fr;}}
+.p{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:28px 26px 26px;transition:.24s;display:flex;flex-direction:column;}
+.p:hover{transform:translateY(-5px);border-color:rgba(200,246,93,.35);background:var(--card-2);}
+.p .tagd{font-family:var(--mono);font-size:10px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--lime);margin-bottom:16px;}
+.p h3{font-size:21px;font-weight:700;letter-spacing:-.02em;margin-bottom:10px;}
+.p p{font-size:14.5px;color:var(--dim);line-height:1.6;margin-bottom:20px;flex:1;}
+.p .tech{display:flex;flex-wrap:wrap;gap:6px;padding-top:18px;border-top:1px solid var(--line);}
+.demo{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;
+  font-size:13px;font-weight:600;color:var(--lime);font-family:var(--font);cursor:pointer;
+  background:var(--lime-dim);border:1px solid rgba(200,246,93,.3);
+  padding:9px 16px;border-radius:8px;margin-bottom:20px;transition:.2s;}
+.demo:hover{background:var(--lime);color:#0a0d13;transform:translateY(-2px);}
+.demo svg{width:14px;height:14px;flex:none;}
+
+/* ---------- VIDEO LIGHTBOX ---------- */
+.vbox{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;
+  background:rgba(4,6,10,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:24px;}
+.vbox.open{display:flex;}
+.vbox-inner{position:relative;width:min(960px,100%);animation:vin .3s cubic-bezier(.2,.7,.3,1);}
+@keyframes vin{from{opacity:0;transform:translateY(24px) scale(.97);}to{opacity:1;transform:none;}}
+.vframe{position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;
+  border:1px solid var(--line);background:#000;box-shadow:0 40px 100px rgba(0,0,0,.6);}
+.vframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.vclose{position:absolute;top:-46px;right:0;display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--dim);
+  background:none;border:1px solid var(--line);border-radius:8px;padding:8px 14px;cursor:pointer;transition:.2s;}
+.vclose:hover{color:var(--lime);border-color:var(--lime);}
+.vfallback{display:block;text-align:center;margin-top:16px;font-family:var(--mono);
+  font-size:12px;letter-spacing:.05em;color:var(--dim);transition:.2s;}
+.vfallback:hover{color:var(--lime);}
+body.vlock{overflow:hidden;}
+.t{font-family:var(--mono);font-size:10.5px;color:var(--dim);
+  background:rgba(255,255,255,.045);padding:5px 9px;border-radius:5px;}
+
+/* ---------- EXPERIENCE ---------- */
+.x{display:grid;grid-template-columns:130px 1fr auto;gap:24px;align-items:baseline;
+  padding:20px 0;border-bottom:1px solid var(--line);transition:.2s;}
+.x:first-of-type{border-top:1px solid var(--line);}
+.x:hover{padding-left:8px;}
+.x .yr{font-family:var(--mono);font-size:11.5px;color:var(--dim);letter-spacing:.04em;}
+.x .role{font-size:17.5px;font-weight:600;letter-spacing:-.015em;}
+.x .role em{font-style:normal;color:var(--dim);font-weight:400;font-size:15px;}
+.x .co{font-family:var(--mono);font-size:11.5px;color:var(--lime);letter-spacing:.06em;
+  text-transform:uppercase;text-align:right;}
+.x.now .role::after{content:"NOW";font-family:var(--mono);font-size:9px;letter-spacing:.14em;
+  background:var(--lime);color:#0a0d13;padding:3px 7px;border-radius:4px;margin-left:11px;
+  vertical-align:middle;font-weight:700;}
+@media(max-width:760px){
+  .x{grid-template-columns:1fr;gap:4px;padding:18px 0;}
+  .x .co{text-align:left;}
+}
+
+/* ---------- SKILLS ---------- */
+.sk{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+@media(max-width:700px){.sk{grid-template-columns:1fr;}}
+.sk-row{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 24px;}
+.sk-row h4{font-family:var(--mono);font-size:10px;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--lime);margin-bottom:13px;font-weight:500;}
+.sk-row p{font-size:14.5px;color:var(--dim);line-height:1.75;}
+.sk-row p b{color:var(--text);font-weight:600;}
+.foot-note{margin-top:26px;font-family:var(--mono);font-size:11.5px;color:var(--dim);letter-spacing:.04em;}
+.foot-note b{color:var(--text);font-weight:500;}
+
+/* ---------- CONTACT ---------- */
+.contact{text-align:center;padding:96px 0 0;position:relative;overflow:hidden;}
+.contact::before{content:"";position:absolute;bottom:-360px;left:50%;transform:translateX(-50%);
+  width:900px;height:640px;background:radial-gradient(circle,rgba(200,246,93,.1),transparent 62%);}
+.contact .wrap{position:relative;z-index:1;}
+.contact h2{margin-bottom:16px;font-size:clamp(30px,5vw,52px);}
+.contact .sub{margin:0 auto 40px;text-align:center;}
+.links{display:flex;flex-wrap:wrap;justify-content:center;gap:11px;}
+.lk{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:10px;
+  border:1px solid var(--line);background:var(--card);font-size:14.5px;font-weight:500;transition:.2s;}
+.lk:hover{border-color:var(--lime);color:var(--lime);transform:translateY(-3px);}
+.lk svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8;}
+footer{margin-top:88px;border-top:1px solid var(--line);padding:22px 0 30px;
+  font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.06em;}
+
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.2,.7,.3,1),transform .6s cubic-bezier(.2,.7,.3,1);}
+.rv.on{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}
+  .rv{opacity:1!important;transform:none!important;}html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <div class="chip-live"><span class="pip"></span> Available for senior roles &amp; contract work</div>
+    <h1>Piyush Dixit<br><span>builds .NET at scale.</span></h1>
+    <p class="sub">
+      Technical Lead at Coforge. <b>11+ years</b> shipping enterprise applications in
+      <b>.NET Core, React and Azure</b> — for power plants, insurers and factory floors.
+    </p>
+    <div class="btns">
+      <a class="b b-fill" href="mailto:pkdixit11@gmail.com">Get in touch</a>
+      <button class="b b-out" type="button" data-video="f9IYw754Pm8">▶ Watch my intro</button>
+      <a class="b b-out" href="https://www.linkedin.com/in/piyush-dixit-7a9a7291/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="b b-out" href="https://github.com/dixitkrpiyush" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="facts">
+      <div class="fact"><div class="n">11<i>+</i></div><div class="t">Years</div></div>
+      <div class="fact"><div class="n">4</div><div class="t">Industries</div></div>
+      <div class="fact"><div class="n">1</div><div class="t">SaaS built solo</div></div>
+      <div class="fact"><div class="n">MTA</div><div class="t">Microsoft certified</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ WORK ============ -->
+<section id="work">
+  <div class="wrap">
+    <span class="label">Selected work</span>
+    <h2>Three things I built.</h2>
+    <div class="projects">
+
+      <article class="p rv">
+        <div class="tagd">Solo product</div>
+        <h3>SheetPlan</h3>
+        <p>Production platform for sheet-metal shops. Groups order parts by material and thickness into single cutting jobs — less scrap, less machine time — then tracks every order through eight stages to delivery.</p>
+        <button class="demo" type="button" data-video="VDj2BDW6KQk">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg>
+          Watch the demo
+        </button>
+        <div class="tech"><span class="t">React</span><span class="t">TypeScript</span><span class="t">.NET Core</span><span class="t">SQL Server</span><span class="t">Docker</span></div>
+      </article>
+
+      <article class="p rv">
+        <div class="tagd">Coforge · Energy</div>
+        <h3>Plant Operations Suite</h3>
+        <p>Event notification, forecast budgeting and fleet configuration for a US power generator. Azure Functions pull live availability data across 18 plants; operators and compliance teams finally work from one system.</p>
+        <div class="tech"><span class="t">.NET Core</span><span class="t">React</span><span class="t">Azure</span><span class="t">Dapper</span><span class="t">Playwright</span></div>
+      </article>
+
+      <article class="p rv">
+        <div class="tagd">Infogain · Insurance</div>
+        <h3>Adjuster Workspace</h3>
+        <p>Claims platform for Mitchell International. Gave third-party adjusters a direct channel into the Decision Point bill review system — replacing email and phone with a traceable digital workflow.</p>
+        <div class="tech"><span class="t">Angular</span><span class="t">Web API</span><span class="t">Entity Framework</span><span class="t">SQL Server</span></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
+  <div class="wrap">
+    <span class="label">Career</span>
+    <h2>Eleven years, one direction.</h2>
+
+    <div class="x now rv"><span class="yr">2025 — Present</span><span class="role">Technical Lead</span><span class="co">Coforge</span></div>
+    <div class="x rv"><span class="yr">2022 — 2025</span><span class="role">Technical Analyst</span><span class="co">Coforge</span></div>
+    <div class="x rv"><span class="yr">2018 — 2022</span><span class="role">Development Consultant</span><span class="co">Infogain</span></div>
+    <div class="x rv"><span class="yr">2017 — 2018</span><span class="role">Senior Software Engineer</span><span class="co">NIIT Technologies</span></div>
+    <div class="x rv"><span class="yr">2016 — 2017</span><span class="role">Software Engineer</span><span class="co">Chetu</span></div>
+    <div class="x rv"><span class="yr">2014 — 2016</span><span class="role">Junior Software Engineer</span><span class="co">CEOlution Alliance</span></div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <div class="wrap">
+    <span class="label">Toolkit</span>
+    <h2>What I work with.</h2>
+    <div class="sk">
+      <div class="sk-row rv"><h4>Backend</h4><p><b>C#</b> · <b>.NET Core</b> · ASP.NET MVC · Web API · Microservices · WCF · RabbitMQ</p></div>
+      <div class="sk-row rv"><h4>Frontend</h4><p><b>React</b> · <b>TypeScript</b> · JavaScript · Angular · HTML5 · CSS3</p></div>
+      <div class="sk-row rv"><h4>Data &amp; Cloud</h4><p><b>SQL Server</b> · Entity Framework · <b>Dapper</b> · <b>Azure</b> · Azure Functions · Docker · CI/CD</p></div>
+      <div class="sk-row rv"><h4>Quality &amp; Practice</h4><p><b>Playwright</b> · Selenium (C#) · NUnit · Agile · Code review · Mentoring</p></div>
+    </div>
+    <p class="foot-note"><b>MCA &amp; BCA</b>, IGNOU · <b>MTA</b> certified · <b>3</b> published articles on Entity Framework</p>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="label">Contact</span>
+    <h2>Let's build something.</h2>
+    <p class="sub">Greater Noida, India. Open to senior roles, contract and freelance work.</p>
+    <div class="links">
+      <a class="lk" href="mailto:pkdixit11@gmail.com">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+        pkdixit11@gmail.com
+      </a>
+      <a class="lk" href="tel:+919555745848">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        +91 95557 45848
+      </a>
+      <a class="lk" href="https://www.linkedin.com/in/piyush-dixit-7a9a7291/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a class="lk" href="https://github.com/dixitkrpiyush" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-1-2.6c3.1-.3 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1S18.7.6 16 2.5a13.4 13.4 0 0 0-7 0C6.3.6 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.4 3.8c0 5.4 3.3 6.6 6.4 7A3.4 3.4 0 0 0 9 18.1V22"/></svg>
+        GitHub
+      </a>
+    </div>
+    <footer>© <span id="yr"></span> Piyush Dixit · Greater Noida, India</footer>
+  </div>
+</section>
+
+<!-- ============ VIDEO LIGHTBOX ============ -->
+<div class="vbox" id="vbox" role="dialog" aria-modal="true" aria-label="SheetPlan demo video">
+  <div class="vbox-inner">
+    <button class="vclose" type="button" id="vclose">ESC · CLOSE ✕</button>
+    <div class="vframe" id="vframe"></div>
+    <a class="vfallback" id="vfallback" href="https://youtu.be/VDj2BDW6KQk" target="_blank" rel="noopener">Video not playing? Open it on YouTube →</a>
+  </div>
+</div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const o=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');o.unobserve(x.target);}})},{threshold:.15});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%3)*70+'ms';o.observe(el);});
+
+/* video lightbox — plays whichever video the clicked button specifies */
+const vbox=document.getElementById('vbox'),vframe=document.getElementById('vframe'),vfb=document.getElementById('vfallback');
+let lastFocus=null;
+function openVideo(id){
+  /* YouTube refuses to embed on pages opened as local files (file://).
+     In that case, open the video on YouTube directly instead of showing a blocked player.
+     Once this page is hosted on a real URL (Netlify, GitHub Pages), the inline player works. */
+  if(location.protocol==='file:'){window.open('https://youtu.be/'+id,'_blank');return;}
+  lastFocus=document.activeElement;
+  vframe.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0" title="Video" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+  vfb.href='https://youtu.be/'+id;
+  vbox.classList.add('open');document.body.classList.add('vlock');
+  document.getElementById('vclose').focus();
+}
+function closeVideo(){
+  vbox.classList.remove('open');document.body.classList.remove('vlock');
+  vframe.innerHTML='';
+  if(lastFocus)lastFocus.focus();
+}
+document.querySelectorAll('[data-video]').forEach(b=>b.addEventListener('click',()=>openVideo(b.dataset.video)));
+document.getElementById('vclose').addEventListener('click',closeVideo);
+vbox.addEventListener('click',e=>{if(e.target===vbox)closeVideo();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&vbox.classList.contains('open'))closeVideo();});
+</script>
+</body>
+</html>
